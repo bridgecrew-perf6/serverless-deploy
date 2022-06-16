@@ -1,5 +1,5 @@
-# org: ngocnguyenvan
-# app: products
+org: hung1007
+app: products
 service: products
 
 provider:
