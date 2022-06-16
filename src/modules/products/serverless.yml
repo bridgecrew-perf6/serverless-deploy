@@ -1,0 +1,30 @@
+create:
+  handler: src/modules/products/productHandler.create
+  events:
+    - http:
+        path: products
+        method: post
+update:
+  handler: src/modules/products/productHandler.update
+  events:
+    - http:
+        path: products/{id}
+        method: put
+find:
+  handler: src/modules/products/productHandler.find
+  events:
+    - http:
+        path: products
+        method: get
+findOne:
+  handler: src/modules/products/productHandler.findOne
+  events:
+    - http:
+        path: products/{id}
+        method: get
+deleteOne:
+  handler: src/modules/products/productHandler.deleteOne
+  events:
+    - http:
+        path: products/{id}
+        method: delete

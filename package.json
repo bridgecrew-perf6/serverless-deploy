@@ -1,0 +1,49 @@
+{
+  "name": "sls-bid",
+  "version": "1.0.0",
+  "description": "This is simple CRUD API example",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "local": "serverless offline",
+    "deploy": "serverless deploy",
+    "coverage": "jest --coverage",
+    "test": "jest"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.1116.0",
+    "dotenv": "^8.2.0",
+    "dynamoose": "^2.7.3",
+    "joi": "^17.6.0",
+    "middy": "^0.36.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.51",
+    "@types/chai": "^4.2.11",
+    "@types/dotenv-safe": "^8.1.0",
+    "@types/jest": "^27.4.1",
+    "@types/lambda-tester": "^3.6.0",
+    "@types/mocha": "^7.0.2",
+    "@types/sinon": "^9.0.0",
+    "@types/supertest": "^2.0.8",
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.2",
+    "istanbul": "^0.4.5",
+    "jest": "^27.5.1",
+    "lambda-tester": "^4.0.1",
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.1",
+    "serverless-offline": "^5.12.1",
+    "serverless-plugin-typescript": "^1.1.9",
+    "sinon": "^9.0.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^8.9.1",
+    "tslint": "^6.1.2",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.8.3"
+  }
+}

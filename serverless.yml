@@ -1,0 +1,29 @@
+# org: ngocnguyenvan
+# app: products
+service: products
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  environment:
+    VERSIONS: ${param:VERSIONS, '1'}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      # Restrict our IAM role permissions to
+      # the specific table for the stage
+      Resource: '*'
+plugins:
+  - serverless-plugin-typescript 
+  - serverless-offline
+
+functions:
+  ${file(src/modules/products/serverless.yml)}
