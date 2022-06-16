@@ -21,7 +21,7 @@ export default class ProductController {
    */
   public create = async (event: any, context?: Context) => {
     try {
-      console.log('functionName', event);
+      console.log('functionName', context.functionName);
       const body = await
         this.productValidate.vCreateOrUpdate(JSON.parse(event.body)) as IProductEntities;
       console.log('body', body);
